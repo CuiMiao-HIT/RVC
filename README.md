@@ -1,4 +1,4 @@
-# miniSNV
+# RVC
 
 ## Introduction
 RVC is a real-time variant calling framework tailored for cycle-based NGS workflows. RVC incrementally processes partially sequenced reads and continuously updates variant evidence using a scanline-based alignment algorithm and a lightweight binomial scoring model.
