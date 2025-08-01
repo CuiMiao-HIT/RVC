@@ -6,17 +6,17 @@ set -o pipefail
 # CONFIGURATION PARAMETERS - MODIFY THESE AS NEEDED
 # ================================================================
 
-SRC_DIR="/home/user/cuimiao/RVC"
-BAM_FILE="/home/user/cuimiao/processed_fastq/scheme2_130_50_50_20/alignments/reads_130_50_50_20_segment1_130bp.bam"
-REF_FASTA="/home/user/yuxian/hg38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna"
+SRC_DIR="*/RVC"
+BAM_FILE="The-first-cycles-batch-data.bam"
+REF_FASTA="reference.fna"
 # --- FASTQ Files (in processing order) ---
     # First FASTQ is used for initial alignment/processing
     # Subsequent FASTQs are used for iterative read extension
 FASTQ_FILES=(
-"/home/user/cuimiao/processed_fastq/scheme2_130_50_50_20/reads_130_50_50_20_segment1_130bp.fastq"
-"/home/user/cuimiao/processed_fastq/scheme2_130_50_50_20/reads_130_50_50_20_segment2_50bp.fastq"
-"/home/user/cuimiao/processed_fastq/scheme2_130_50_50_20/reads_130_50_50_20_segment3_50bp.fastq"
-"/home/user/cuimiao/processed_fastq/scheme2_130_50_50_20/reads_130_50_50_20_segment4_20bp.fastq"
+"The-first-cycles-batch-130length-data.fastq"
+"The-second-cycles-batch-50length-data.fastq"
+"The-third-cycles-batch-50length-data.fastq"
+"The-last-cycles-batch-20length-data.fastq"
     # Add more FASTQ files here if needed for additional extension rounds
 )
 # --- Read Lengths (corresponding to each FASTQ file) ---
@@ -24,7 +24,6 @@ FASTQ_FILES=(
     # Subsequent read lengths are for each extension round
     # Add more values if you have more FASTQ files
 READ_LENGTHS=(130 50 50 20)  
-# --- Output Configuration ---
 OUTPUT_DIR="${SRC_DIR}/RUN_RESULT"
 
 
